@@ -1,0 +1,7 @@
+<%= @product.name %></br>
+<%= @product.price %></br>
+<%= @product.size %></br>
+<%= @product.gender %></br>
+<%= image_tag(@product.img_url) %>
+
+<%= button_to "Add to Cart", add_product_path, method: 'put' %>

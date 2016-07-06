@@ -1,0 +1,20 @@
+<div>
+	<%= form_for [@product] do |form| %>
+		<%= form.label :name, "Name" %>
+	  <%= form.text_field :name %></br>
+	  <%= form.label :price, "Price" %>
+	  <%= form.text_field :price %></br>
+	  <%= form.label :description, "Description" %>
+	  <%= form.text_field :description %></br>
+	  <%= form.label :size, "Size" %>
+	  <%= form.text_field :size %></br>
+	  <%= form.label :img_url, "Image" %>
+	  <%= form.text_field :img_url %></br>
+
+	  <%= form.label :gender, "gender" %>
+	  <%= form.text_field :gender %></br>
+	  
+	  <%= form.submit class: "btn btn-warning" %>
+	<% end %>
+</div>
+

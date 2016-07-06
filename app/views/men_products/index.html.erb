@@ -1,0 +1,4 @@
+<% @men_products.each do |product| %>
+
+	<%= link_to image_tag(product.img_url), product_path(product.id) %>
+<% end %>
