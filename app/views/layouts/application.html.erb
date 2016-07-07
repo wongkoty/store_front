@@ -24,7 +24,7 @@
 		  Welcome <strong><%= current_user.first_name %></strong>
 
 			<%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> |
-		  <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
+		  <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %> |
 		  <!-- add link to shopping cart -->
 		  <%= link_to("View Cart", shopping_cart_path(current_user.id)) %>
 	  </div>
@@ -73,8 +73,9 @@
 <script>
 $(document).ready(function(){
  $('.owl-carousel').owlCarousel({
+ 		loop: true,
     autoPlay: 3000,
-    item: 3
+    items: 3
  });
 });
 </script>
