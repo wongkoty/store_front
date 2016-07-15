@@ -1,7 +1,9 @@
-<%= @product.name %></br>
-<%= @product.price %></br>
-<%= @product.size %></br>
-<%= @product.gender %></br>
-<%= image_tag(@product.img_url) %>
+<b>Name: </b><%= @product.name %></br>
+<b>$ </b><%= @product.price %></br>
+<b>Size: </b><%= @product.size %></br>
+<b>Gender: </b><%= @product.gender %></br>
+<%= image_tag(@product.img_url) %></br>
 
-<%= button_to "Add to Cart", add_product_path, method: 'put' %>
+<% if current_user %>
+	<%= button_to "Add to Cart", add_product_path, method: 'put' %>
+<% end %>
