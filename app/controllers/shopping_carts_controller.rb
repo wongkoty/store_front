@@ -7,18 +7,9 @@ class ShoppingCartsController < ApplicationController
 
 	def show
 		p current_user.shopping_cart
-
 	
 		# test = ShoppingCart.find(params[:id]) == nil
-		if current_user.shopping_cart == nil
-			puts "not found"
-			@shopping_cart = ShoppingCart.new({user_id: current_user.id})
-			if @shopping_cart.save
-				p @shopping_cart.user_id
-				p current_user.id
-				@shopping_cart.user_id << current_user.id
-			end
-		end
+
 		if current_user.shopping_cart != nil
 			get_total
 		end
