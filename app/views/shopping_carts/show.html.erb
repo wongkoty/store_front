@@ -1,13 +1,14 @@
-<%= @shopping_cart.id %></br>
-This is the current user: <%= current_user.email%></br>
-<b>Total Amount:</b> <%= @money %></br>
-<b>Total Items: <%= @shopping_cart.products.count %></b> 
+<div>
+	Hey <b><%= current_user.first_name%></b>, this is your cart!</br>
+	<b>Total Amount:</b> <%= @money %></br>
+	<b>Total Items:</b>  <%= @shopping_cart.products.count %>
+</div></br>
 
 <% @shopping_cart.products.each do |product| %>
 <div class="cart-product">
-	<%= product.name %>
-	<%= product.price %>
+	<%= product.name %></br>
+	$ <%= product.price %></br>
 	<%= image_tag(product.img_url) %>
 	<%= button_to("Remove Item", shopping_cart_path(product.id), method: 'delete') %>
-</div>
+</div></br>
 <% end %>

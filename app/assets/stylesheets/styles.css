@@ -2,6 +2,9 @@ body {
 	text-align: center;
 	margin: 0;
 }
+.product-index img {
+	width: 200px;
+}
 ul {
   list-style-type: none;
   margin: 0;
@@ -17,11 +20,15 @@ li {
 li a {
  	display: block;
   padding: 14px 16px;
-  background-color: #dddddd;
+  color: black;
+  /*background-color: #dddddd;*/
   text-decoration: none;
 }
 li a:hover {
   background-color: white;
+}
+li a:visited {
+  color: #C9103B;
 }
 #container {
 	max-width: 85%;
@@ -29,6 +36,9 @@ li a:hover {
 }
 .owl-carousel img {
 	width: 200px;
+}
+.cart-product {
+	padding-top: 20px;
 }
 .cart-product img {
 	width: 200px;
@@ -50,7 +60,7 @@ li a:hover {
 	float: left;
 }
 #footer a {
-	background-color: blue;
+	/*background-color: blue;*/
 }
 .top-nav-info {
 	display: inline-block;
